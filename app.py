@@ -46,7 +46,7 @@ def main():
         # Create Embeddings
         embeddings = OpenAIEmbeddings()
         index_name = "langchaintut"
-        # knowledge_base = FAISS.from_texts(chunks,embeddings)
+        # knowledge_base = FAISS.from_texts(chunks,embeddings) //FAISS
         vectorstore = Pinecone.from_texts(chunks, embeddings, index_name=index_name)
 
         # Show user input
